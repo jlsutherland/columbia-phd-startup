@@ -110,8 +110,6 @@ fonts=(
 echo "installing fonts..."
 brew cask install ${fonts[@]}
 
-
-```
 brew tap caskroom/cask
 brew install brew-cask
  
