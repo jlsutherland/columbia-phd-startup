@@ -143,3 +143,7 @@ brew cask install font-fira-code
 brew cask install iterm2
 brew cask install gitup           # if you want a GUI for git stuff (h/t @jennybryan)
 ```
+
+```R
+install.packages('knitr')
+```
