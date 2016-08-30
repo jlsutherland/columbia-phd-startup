@@ -2,18 +2,16 @@
 
 ## MacOS
 
-``` shell
-curl -s http://jlsutherland.com/startup-macos.sh | bash
+``` bash
+curl -s https://raw.githubusercontent.com/jlsutherland/columbia-phd-startup/master/startup-scripts/macos.sh | bash
 ```
 
 ## Windows
 
-## Linux/Ubuntu
-
 ``` shell
-curl -s http://jlsutherland.com/startup-ubuntu.sh | bash
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/jlsutherland/columbia-phd-startup/master/startup-scripts/pc.ps1'))"
 ```
 
-Quickstart kit for new Columbia Polisci PhD students.
+## Linux/Ubuntu
 
-WIP atm
+Not yet supported (ironically).
