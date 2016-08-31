@@ -1,8 +1,8 @@
 # The Ph.D. Starter Kit
 
-If you've reached this web page you are either interested in setting your computer up with the Ph.D. starter kit or you've already done so.  In both cases, you're doing great!
+The purpose of the starter kit is to install the software that is commonly used in your courses (and, more generally, the profession). It is _not_ to give you a familiarity with those tools---that's what the workshop is for! But I hope that these instructions will get you up and running with the software you need so we use our workshop time together exploring how to use these tools.
 
-We designed the starter kit to get you up and running in less than ten minutes (give or take download time) with the software you will likely need to use in your graduate program. The starter kit installs on your system:
+I designed the starter kit to get you up and running in less than ten minutes (give or take download time). The starter kit installs on your system:
 
 ## Starter kit: the contents
 
@@ -16,6 +16,11 @@ We designed the starter kit to get you up and running in less than ten minutes (
 * [Pandoc](http://pandoc.org/) -- a tool used by R Studio to convert between document formats
 * [Java 8](https://java.com/en/download/) -- the latest Java distribution, required for some R packages
 * [git](https://git-scm.com/) -- a versioning tool
+
+## Why do I need this?
+The tools installed by the starter kit comprise the minimal set of things you will need to complete your course responsibilities and author papers at Columbia. To perform to _your own standards_ in the PhD program, you will probably need at least a working knowledge of what these tools are and how to use them... I have yet to meet a recent grad who doesn't!
+
+These tools are just tools---substantive research should be are the forefront of your consciousness! These tools, though somewhat hard to learn at first, will make _doing that research and collaborating with other scholars_ much easier.
 
 ## How do I get it?
 
