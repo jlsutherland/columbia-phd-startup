@@ -59,3 +59,7 @@ R CMD javareconf JAVA_CPPFLAGS=-I/System/Library/Frameworks/JavaVM.framework/Hea
 
 ## Open the browser
 open -a /Applications/Safari.app http://www.jlsutherland.com/phd-starter-kit/
+
+echo "#################################################################################"
+echo "#################################################################################"
+echo "Congrats! The script completed!"
