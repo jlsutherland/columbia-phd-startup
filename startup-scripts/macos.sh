@@ -17,7 +17,7 @@ brew update
 brew install git R libsvg libxml2 gdal geos boost pandoc
 
 # Install apps we want.
-brew cask install qlmarkdown java mactex
+brew cask install qlmarkdown java mactex texmaker textmate
 brew cask install caskroom/cask/rstudio
 brew cleanup
 
