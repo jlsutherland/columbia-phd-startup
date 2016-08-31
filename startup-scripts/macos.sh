@@ -31,6 +31,10 @@ echo "  * Pandoc -- a tool used by R Studio to convert between document formats"
 echo "  * Java 8 -- the latest Java distribution, required for some R packages"
 echo ""
 echo ""
+echo "If you do no want me to install these programs, you have 30 seconds to stop"
+echo "this program by hitting Ctrl-C."
+echo "sleep 30"
+sleep 30
 
 # Check for Homebrew,
 # Install if we don't have it.
