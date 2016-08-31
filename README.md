@@ -2,7 +2,7 @@
 
 The purpose of the starter kit is to install the software that is commonly used in your courses (and, more generally, the profession). It is _not_ to give you a familiarity with those tools---that's what the workshop is for! But I hope that these instructions will get you up and running with the software you need so we use our workshop time together exploring how to use these tools.
 
-The workshop will give you a familiarity with the software, which I then hope will set you up to explore these software packages in greater depth. At the conclusion of the workshop, I will distribute materials that will help you to accomplish that exploration.
+The workshop will give you an introduction to the software, which I then hope will set you up to explore these software packages in greater depth. At the conclusion of the workshop, I will distribute materials that will help you to accomplish that exploration.
 
 If you run into issues while working through this tutorial, stop and send me an email at `joseph.sutherland@columbia.edu`. We have some time to debug things at the beginning of the workshop.
 
