@@ -57,9 +57,5 @@ brew cleanup
 # Tell R where java is.
 R CMD javareconf JAVA_CPPFLAGS=-I/System/Library/Frameworks/JavaVM.framework/Headers
 
-## Clone the startup repo to local.
-mkdir -p ~/Research
-git clone https://github.com/jlsutherland/columbia-phd-startup.git ~/Research/columbia-phd-startup
-
 ## Open the browser
 open -a /Applications/Safari.app http://www.jlsutherland.com/phd-starter-kit/
