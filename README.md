@@ -21,7 +21,7 @@ We designed the starter kit to get you up and running in less than ten minutes (
 
 It's easy to use the starter kit. And I promise, you'll feel pretty cool getting to use the Terminal for a second, sort of like a hacker.
 
-If you're interested in installing the Ph.D. starter kit, then follow the instructions below or visit the [GitHub project](https://github.com/jlsutherland/columbia-phd-startup).
+If you're interested in installing the Ph.D. starter kit, then follow the instructions below or visit the [blog post](https://jlsutherland.com/columbia-phd-startup).
 
 # Installation
 
@@ -92,15 +92,17 @@ Please don't continue with the setup---come into the workshop. We will debug you
 
 # Setting up
 
+If you got this far, go ahead and close down the `Command Prompt` or `Terminal`. We will chat little more about how to use these command-line interfaces, but they are no longer necessary for the purposes of this tutorial.
+
 Take some time to read up on the tools you now have---links are provided above. Here are the first few things you want to do to configure and test drive your new setup.
 
 ## Update your TeX distribution
-On Windows, update MikTeX by going to all apps > miktex 2.9 > miktex update (admin), then follow the prompts to update your distribution.
+On Windows, update MikTeX by going to all apps > miktex 2.9 > miktex update (admin), then follow the prompts to update your distribution. On Mac, search for TeX Live Utility and perform the update using TeX Live.
 
-On Mac, search for TeX Live Utility and perform the update using TeX Live.  This may take a while---it downloads several packages onto your computer to prepare LaTeX for use.
+This may take a while---it downloads several packages onto your computer to prepare LaTeX for use.
 
 ## Configure your R environment
-Boot up R Studio. Then, on the command line, run:
+Boot up R Studio. Then, on the command line provided within R Studio, run:
 
 ``` R
 install.packages(c('knitr', 'rmarkdown'))
