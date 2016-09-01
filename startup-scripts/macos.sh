@@ -47,6 +47,7 @@ fi
 brew update
 
 # Install binaries we want.
+brew tap homebrew/science
 brew install git R libsvg libxml2 gdal geos boost pandoc
 
 # Install apps we want.
