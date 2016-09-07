@@ -1,0 +1,184 @@
+%%%%%
+%%%%% DOC INITIALIZATION
+%%%%%
+
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+
+% FONT
+$if(fontfamily)$
+\usepackage[$fontfamilyoptions$]{$fontfamily$}
+$else$
+\usepackage{lmodern}
+$endif$
+\usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amssymb, amsmath}
+\usepackage{upquote}
+\usepackage{color}
+\usepackage{physics}
+
+% APPENDIX FORMATTING
+$if(appendix)$
+\renewcommand*\thetable{$appendixletter$.\arabic{table}}
+\renewcommand*\thefigure{$appendixletter$.\arabic{figure}}
+\usepackage{endfloat}
+$endif$
+
+% SYNTAX HIGHLIGHTING
+$if(highlighting-macros)$
+$highlighting-macros$
+\renewenvironment{Shaded}{\begin{snugshade}\begin{singlespacing}}{\end{singlespacing}\end{snugshade}}
+$endif$
+$if(verbatim-in-note)$
+\usepackage{fancyvrb}
+$endif$
+
+% TABLES
+$if(tables)$
+\usepackage{longtable,booktabs,dcolumn}
+$endif$
+
+% GRAPHICS/FIGURES
+$if(graphics)$
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+  \else\Gin@nat@width\fi}
+\makeatother
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+$endif$
+\usepackage[bf]{caption}
+
+
+% TITLE
+$if(title)$
+\title{$title$$if(subtitle)$: $subtitle$$endif$ $if(anonymous)$$else$$if(thanks)$\thanks{$thanks$} $endif$$endif$ }
+$endif$
+\author{
+$if(author)$
+$author.name$
+\footnote{
+$if(author.note)$
+$author.note$
+$endif$
+$if(author.email)$
+Email: $author.email$
+$endif$
+}
+$endif$
+}
+\date{$if(date)$$date$$else$\today$endif$}
+
+% BIBLIOGRAPHY
+$if(natbib)$
+\usepackage{natbib}
+\bibliographystyle{$if(biblio-style)$$biblio-style$$else$apsr$endif$}
+$endif$
+$if(biblatex)$
+\usepackage$if(biblio-style)$[style=$biblio-style$]$endif${biblatex}
+$if(biblatexoptions)$\ExecuteBibliographyOptions{$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$}$endif$
+$for(bibliography)$
+\addbibresource{$bibliography$}
+$endfor$
+$endif$
+\usepackage[noabbrev]{cleveref}
+
+% DOUBLE SPACING AND PAGE FORMATTING
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage[labelfont=bf]{caption}
+$if(output.pdf_document.number_sections)$
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+
+% PDF HYPER REFS
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+  \ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+  unicode=false, % unicode breaks when used with xetex
+  xetex]{hyperref}
+  \else
+  \usepackage[unicode=true]{hyperref}
+  \fi
+}
+\@ifpackageloaded{color}{
+  \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+  \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+  bookmarks=true,
+  pdfauthor={$if(anonymous)$$else$$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$$endif$},
+  pdfkeywords = {$if(keywords)$$keywords$$endif$},
+  pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
+  colorlinks=true,
+  citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
+  urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
+  linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
+  pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+
+
+%%%%%
+%%%%% BEGIN DOCUMENT
+%%%%%
+
+\begin{document}
+
+% MAKE TITLE AND ABSTRACT
+$if(title)$
+\baselineskip=18pt
+\maketitle
+$if(abstract)$
+\begin{singlespacing}
+\begin{abstract}
+\small
+$abstract$
+\end{abstract}
+\end{singlespacing}
+$endif$
+$endif$
+\thispagestyle{empty}
+
+% TABLE OF CONTENTS
+$if(toc)$
+\newpage
+\thispagestyle{empty}
+{
+  \hypersetup{linkcolor=black}
+  \setcounter{tocdepth}{$toc-depth$}
+  \tableofcontents
+}
+$endif$
+
+% BODY TEXT
+\newpage
+$if(doublespace)$
+\begin{doublespacing}
+$endif$
+$body$
+$if(doublespace)$
+\end{doublespacing}
+$endif$
+
+% BIB
+\newpage
+\singlespacing
+$if(bibliography)$
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+\bibliographystyle{apsr_fs}
+$endif$
+
+% POST-INCLUDES
+$for(include-after)$
+$include-after$
+$endfor$
+
+\end{document}
